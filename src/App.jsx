@@ -1,10 +1,30 @@
-import Articulos from "./componentes/Articulos/Articulos"
-import CustomHooks from "./componentes/CustomHooks/CustomHooks"
+//import Articulos from "./componentes/Articulos/Articulos"
+//import CustomHooks from "./componentes/CustomHooks/CustomHooks"
+
+//Importar la función y el componente Mensaje. 
+import Mensaje from "./componentes/Patrones/Mensaje"
+import { mensajeConTitulo, conAumento } from "./componentes/Patrones/hoc"
+import Producto from "./componentes/Patrones/Producto"
+import Login from "./componentes/Patrones/Login"
 
 const App = () => {
+
+  const NuevoComponente = mensajeConTitulo(Mensaje)
+  const NuevoProducto = conAumento(Producto);
+
+
   return (
     <>
-    <h1>Blog de Gatitos</h1>
+
+    <NuevoComponente/>
+    <NuevoProducto nombre={"Tomate"} precio={100} />
+    <Login/>
+
+    
+    {
+      /*
+
+      <h1>Blog de Gatitos</h1>
 
     <h2>Noticias</h2>
     
@@ -28,6 +48,12 @@ const App = () => {
     <CustomHooks/>
 
 
+
+
+
+
+      */
+    }
 
 
 
